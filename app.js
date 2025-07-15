@@ -79,34 +79,108 @@ _________________________ Answer ____________________________*/
 // document.getElementById('display').innerHTML = fullName
 
 /*_______________________ Question no 5 ______________________
+create obj by input  and save data to local storage and get data by dom
+_________________________ Answer ____________________________*/
+// let obj = [{id:1,
+//     name : 'Aziz'
+// },
+// {id : 2,
+//     name : 'Hadi'
+// },{id:3,
+//     name :'karim'
+// }]
+// console.log(obj);
+// let data = [];
+// let enter = Number(prompt('enter id'));
+// for(let i = 0;i < obj.length;i++){
+//     if(obj[i].id === enter){data = obj[i];
+//     break;
+// }}
+// console.log(data);
 
+// let getDiv = document.getElementById('display');
+// getDiv.innerHTML = `<p>Id: ${data.id}</p>
+// <p>Name: ${data.name}</p>`
+
+
+/*_______________________ Question no 6 ______________________
+push data to array
+_________________________ Answer ____________________________*/
+//  let array = [];
+// function submitting(){let getInupt = document.getElementById('userinput').value;
+   
+//     if(array !== ' '){array.push(getInupt);
+//          document.getElementById('display').innerHTML = array + '<br>'
+//     }
+   
+// }
+
+/*_______________________ Question no 7 ______________________
+Lucky Bidding Game
+_________________________ Answer ____________________________*/
+// function biding(){let getCoin = Number(document.getElementById('heading').innerHTML);
+
+//     let getGuessNumber = Number(document.getElementById('userinput').value);
+
+//     document.getElementById('display1').innerHTML = getGuessNumber;
+
+//     let getbidingAmount = Number(document.getElementById('amountforbidding').value);
+
+    
+
+//     let random = Math.floor(Math.random()*2)+1;
+
+//     document.getElementById('display2').innerHTML = random;
+//     // call function inside here 
+//     ans(getCoin,getGuessNumber,getbidingAmount,random);
+//     // reload 
+//     setTimeout(function() {
+//     location.reload();
+//   }, 4000);
+// }
+// // function 2 we create here 
+// function ans(getCoin,getGuessNumber,getbidingAmount,random){let result;
+//     if(getGuessNumber === random){result = getCoin + getbidingAmount;}
+//     else{result = getCoin - getbidingAmount;}
+//     document.getElementById('p3').innerHTML = result;
+// }
+/*_______________________ Question no 8 ______________________
+biding game
 _________________________ Answer ____________________________*/
 
 
+// now we create biding function 
+// function biding(){let coin = Number(document.getElementById('heading').innerText);
+    
+//     var getbidingNumber = Number(document.getElementById('bidding').value);
+//     var getbidingAmount = Number(document.getElementById('bidding-amount').value);
+//     let random = Math.floor(Math.random()*3)+1;
+//     let getp1 = document.getElementById('p1');
+//     let getp2 = document.getElementById('p2');
+//     let getp3 = document.getElementById('p3');
+//     getp1.innerHTML = 'Bidding Number' + ' ' + getbidingNumber;
+//     getp2.innerHTML = 'Bidding Amount' + ' ' + getbidingAmount;
+//     getp3.innerHTML = 'random' + ' ' + random; 
+//     // now apply condition 
+    
+// b(getbidingAmount,getbidingNumber,random,coin);
 
+// }
 
+// // second function
+// function b(getbidingAmount,getbidingNumber,random,coin){let result;
+//     if(getbidingNumber === random){ result = getbidingAmount + coin;
+//         console.log(result)
+        
+//     }
+//     else{result = coin - getbidingAmount;
+//         console.log(result)
+//     }
 
-/*_______________________ Question no 1 ______________________
+//     }
 
-_________________________ Answer ____________________________*/
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-/*_______________________ Question no 1 ______________________
-
+/*_______________________ Question no 9 ______________________
+Lucky Bidding Game 
 _________________________ Answer ____________________________*/ 
 
 
