@@ -359,10 +359,28 @@ _________________________ Answer ____________________________*/
 //   showImages(currentImg)
 // }
 
-/*_______________________ Question no 1 ______________________
+/*_______________________ Question no 19 ______________________
 
 _________________________ Answer ____________________________*/
 
+// now create function 
+function save(){let getName = document.getElementById('name').value;
+let getAge = document.getElementById('age').value;
+let getClass = document.getElementById('class').value;
+// we create an object 
+let studentDetails = {Name : getClass,
+  Age : getAge,
+  Class: getClass,
+}
+let convetString = JSON.stringify(studentDetails);
+
+localStorage.setItem('info',convetString);
+
+let convertOrigional = JSON.parse(convetString);
+let getObj = localStorage.getItem('info');
+console.log(getObj)
+
+}
 
 
 
