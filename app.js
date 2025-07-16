@@ -180,71 +180,184 @@ _________________________ Answer ____________________________*/
 //     }
 
 /*_______________________ Question no 9 ______________________
-Lucky Bidding Game 
-_________________________ Answer ____________________________*/ 
+Highlight Next Element
+Objective:
+When you click a button, the next sibling element of a paragraph should change its background color.
 
+HTML Sample:
 
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-/*_______________________ Question no 1 ______________________
+<p>This is a paragraph.</p>
+<div>This is a next sibling.</div>
+<button onclick="highlightNext()">Highlight Next</button>
+JS Task:
+Write a function highlightNext() that changes the background of the next sibling to yellow.
 
 _________________________ Answer ____________________________*/ 
+// function highlightNext(){let get = document.getElementById('p1');
+//     let getnext = get.nextElementSibling;
+//     getnext.style.color = 'yellow'
+// }
+
+/*_______________________ Question no 10 ______________________
+ Get Text of Previous Sibling
+Objective:
+When you click a button, get the text content of the previous sibling of a heading and show it in an alert.
+
+HTML Sample:
+
+<p>This is the previous paragraph.</p>
+<h3>This is a heading</h3>
+<button onclick="showPreviousText()">Show Previous Text</button>
+JS Task:
+Write showPreviousText() that alerts the text of the paragraph.
+_________________________ Answer ____________________________*/
+// function showPreviousText(){let get = document.getElementById('center');
+//     let needed = get.previousElementSibling.innerHTML;
+//     alert(needed)
+// }
+
+/*_______________________ Question no 11 ______________________
+previousElementSibling and nextElementSiblings
+_________________________ Answer ____________________________*/
+// let get = document.getElementById('center');
+// console.log(get);
+// // let getprevious = get.previousElementSibling.previousElementSibling.previousElementSibling;
+// let getprevious = get.previousElementSibling.innerHTML;
+
+// console.log(getprevious);
+// let next = get.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+// console.log(next)
+/*_______________________ Question no 12 ______________________
+previousElementSibling and nextElementSiblings
+_________________________ Answer ____________________________*/
+// let get = document.getElementById('center');
+//  let getprevious = get.previousElementSibling; output = contact
+//  let getprevious = get.previousElementSibling.previousElementSibling; output = Help
+//  let getprevious = get.previousElementSibling.previousElementSibling.previousElementSibling; output = null;
+//  console.log(getprevious)
+// let getNext = get.nextElementSibling; 
+// console.log(getNext)
 
 
+/*_______________________ Question no 13 ______________________
+variable scope
+_________________________ Answer ____________________________*/
+// let name = 'aziz';
+// function greeting(){console.log('1',name)}
+// greeting()
+// console.log('2',name)
+// function test(){var name = 'aziz';
+//     console.log(name)
+// }
+// test()
+// console.log(name)
+// if(true){var x = 20;
+//     console.log(x)
+// }
+// console.log(x)
 
-/*_______________________ Question no 1 ______________________
+/*_______________________ Question no 14 ______________________
+: Block Scope with let
+📝 Objective: Understand that let is block-scoped.
+
+{
+  let x = 10;
+  console.log(x); // What will this print?
+}
+console.log(x); // What will happen here?
+❓Question:
+
+What do you expect to see in both console.log() lines?
+
+Try changing let to var and see the difference.
+_________________________ Answer ____________________________*/
+// {let x = 10;
+//     console.log(x)
+// }
+// console.log(x)
+
+
+/*_______________________ Question no 15 ______________________
+Function Scope with var
+📝 Objective: Learn that var is function-scoped.
+
+function showVar() {
+  if (true) {
+    var a = 20;
+  }
+  console.log(a); // Will this work?
+}
+showVar();
+console.log(a); // Will this work?
+❓Try this:
+
+Replace var with let. What happens?
+
 
 _________________________ Answer ____________________________*/
+// function showVar(){if(true){var a = 20;}
+// console.log(a)}
+// showVar();
+// console.log(a)
 
+/*_______________________ Question no 16 ______________________
+Global vs Local Scope
+📝 Objective: Understand the difference between global and local variables.
+let message = "Hello, World!";
+function greet() {
+  let message = "Hello from function!";
+  console.log(message); // What will this show?
+}
 
+greet();
+console.log(message); // What will this show?
+❓Question:
+
+Why are the two outputs different?
+
+What happens if you remove let inside the function?
+
+_________________________ Answer ____________________________*/
+// let message = 'Hello, world';
+// function greet(){
+//     console.log(message)
+// }
+// greet();
+// console.log(message)
+/*_______________________ Question no 17 ______________________
+simple img slider
+_________________________ Answer ____________________________*/ 
+// let current = 0;
+// const images = document.querySelectorAll('#slider img');
+// console.log(images);
+
+// function showImages(index){for(let i = 0;i<images.length;i++){images[i].classList.remove('active');}
+// images[index].classList.add('active')}
+
+// function nextImage(){current = (current + 1)% images.length;
+//   showImages(current);
+// }
+
+// function prevImage(){current = (current - 1 + images.length)%images.length;
+//   showImages(current)
+// }
+
+/*_______________________ Question no 18 ______________________
+img slider
+_________________________ Answer ____________________________*/
+// let currentImg = 0;
+// let Images = document.querySelectorAll('img');
+// console.log(Images);
+// function showImages(index){for(let i = 0; i<Images.length;i++){Images[i].classList.remove('visib')}
+// Images[index].classList.add('visib')}
+// // second function 
+// function previous(){currentImg = (currentImg+1)% Images.length;
+//   showImages(currentImg)
+// }
+// // third function
+// function next(){currentImg = (currentImg - 1 + Images.length)% Images.length;
+//   showImages(currentImg)
+// }
 
 /*_______________________ Question no 1 ______________________
 
