@@ -360,35 +360,90 @@ _________________________ Answer ____________________________*/
 // }
 
 /*_______________________ Question no 19 ______________________
-
+local storage
 _________________________ Answer ____________________________*/
 
 // now create function 
-function save(){let getName = document.getElementById('name').value;
-let getAge = document.getElementById('age').value;
-let getClass = document.getElementById('class').value;
-// we create an object 
-let studentDetails = {Name : getClass,
-  Age : getAge,
-  Class: getClass,
-}
-let convetString = JSON.stringify(studentDetails);
+// function save(){let getName = document.getElementById('name').value;
+// let getAge = Number(document.getElementById('age').value);
+// let getClass = document.getElementById('class').value;
+// document.getElementById('name').value = '';
+// document.getElementById('age').value = '';
+// document.getElementById('class').value = '';
+// // we create an object 
+// let studentDetails = {Name : getName,
+//   Age : getAge,
+//   Class: getClass,
+// }
+// let convetString = JSON.stringify(studentDetails);
 
-localStorage.setItem('info',convetString);
+// localStorage.setItem('info',convetString);
 
-let convertOrigional = JSON.parse(convetString);
-let getObj = localStorage.getItem('info');
-console.log(getObj)
+// let convertOrigional = JSON.parse(convetString);
+// let getObj = localStorage.getItem('info');
+// let  origional = JSON.parse(getObj);
+// console.log(origional);
+// document.getElementById('display').innerHTML = `Name : ${origional.Name} <br>
+// Class : ${origional.Class}<br>
+// Age : ${origional.Age}`
 
-}
+// }
 
-
-
-
-/*_______________________ Question no 1 ______________________
+/*_______________________ Question no 20 ______________________
 
 _________________________ Answer ____________________________*/
+function addStudent() {
+      var name = document.getElementById("name").value;
+      var age = document.getElementById("age").value;
+      var className = document.getElementById("class").value;
 
+      if (name === "" || age === "" || className === "") {
+        alert("Please fill all fields");
+        return;
+      }
+
+      var student = {
+        name: name,
+        age: age,
+        class: className
+      };
+
+      var allStudents = localStorage.getItem("students");
+
+      if (allStudents === null) {
+        allStudents = [];
+      } else {
+        allStudents = JSON.parse(allStudents);
+      }
+
+      allStudents.push(student);
+      localStorage.setItem("students", JSON.stringify(allStudents));
+
+      document.getElementById("name").value = "";
+      document.getElementById("age").value = "";
+      document.getElementById("class").value = "";
+
+      showStudents();
+    }
+
+    function showStudents() {
+      var output = document.getElementById("output");
+      output.innerHTML = "";
+
+      var allStudents = localStorage.getItem("students");
+
+      if (allStudents !== null) {
+        allStudents = JSON.parse(allStudents);
+
+        for (var i = 0; i < allStudents.length; i++) {
+          output.innerHTML +=
+            "Name: " + allStudents[i].name + " | Age: " + allStudents[i].age + " | Class: " + allStudents[i].class + "<br><br>";
+        }
+      }
+    }
+
+    // Call when page loads
+    showStudents();
 
 
 
