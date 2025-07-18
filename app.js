@@ -570,57 +570,64 @@ _________________________ Answer ____________________________*/
 todo list practice
 _________________________ Answer ____________________________*/
 // first funciton for creating local storage and save data
-function adding(){let getInputValue = document.getElementById('userinput').value;
-  if(getInputValue === ''){alert('plz enter valu');
-    return;
-  }
-  var getFromLocalStorage = localStorage.getItem('saved');
-  if(getFromLocalStorage === null){getFromLocalStorage = []}
-  else{getFromLocalStorage = JSON.parse(getFromLocalStorage)}
-  getFromLocalStorage.push(getInputValue);
- getFromLocalStorage = JSON.stringify(getFromLocalStorage);
- localStorage.setItem('saved',getFromLocalStorage);
-//  make input empty
-document.getElementById('userinput').value = '';
-document.getElementById('userinput').focus();
-showing();
+// function adding(){let getInputValue = document.getElementById('userinput').value;
+//   if(getInputValue === ''){alert('plz enter valu');
+//     return;
+//   }
+//   var getFromLocalStorage = localStorage.getItem('saved');
+//   if(getFromLocalStorage === null){getFromLocalStorage = []}
+//   else{getFromLocalStorage = JSON.parse(getFromLocalStorage)}
+//   getFromLocalStorage.push(getInputValue);
+//  getFromLocalStorage = JSON.stringify(getFromLocalStorage);
+//  localStorage.setItem('saved',getFromLocalStorage);
+// //  make input empty
+// document.getElementById('userinput').value = '';
+// document.getElementById('userinput').focus();
+// showing();
 
-}
-// now we show our saved data on dom from localstorage 
-function showing(){var getFromLocalStorage = localStorage.getItem('saved');
-  getFromLocalStorage = JSON.parse(getFromLocalStorage);
-  if(getFromLocalStorage){
-    let list = document.getElementById('display');
-    list.innerHTML = '';
-    for(let i = 0; i <getFromLocalStorage.length; i++){
-      let li = document.createElement('li');
-      let liContent = document.createTextNode(getFromLocalStorage[i]);
-      li.appendChild(liContent);
-      let btn = document.createElement('button');
-      let btnContent = document.createTextNode('Delete');
-      btn.appendChild(btnContent);
-      // btn.setAttribute('onclcik',`deleting(${i})`);
-      btn.setAttribute('onclick', `deleting(${i})`);
-      list.appendChild(li);
-      list.appendChild(btn);
-    }
-  }
-  else{list.innerHTML = "<li>No item found</li>"}
+// }
+// // now we show our saved data on dom from localstorage 
+// function showing(){var getFromLocalStorage = localStorage.getItem('saved');
+//   getFromLocalStorage = JSON.parse(getFromLocalStorage);
+//   if(getFromLocalStorage){
+//     let list = document.getElementById('display');
+//     list.innerHTML = '';
+//     for(let i = 0; i <getFromLocalStorage.length; i++){
+//       let li = document.createElement('li');
+//       let liContent = document.createTextNode(getFromLocalStorage[i]);
+//       li.appendChild(liContent);
+//       li.style.listStyle = 'none';
+//       let btn = document.createElement('button');
+//       let btnContent = document.createTextNode('Delete');
+//       btn.appendChild(btnContent);
+//       // btn.setAttribute('onclcik',`deleting(${i})`);
+//       btn.setAttribute('onclick', `deleting(${i})`);
+//       let  div = document.createElement('div');
+//       div.appendChild(li);
+//       div.appendChild(btn);
+//       list.appendChild(li);
+//       list.appendChild(btn);
+      
+//     }
+//   }
+//   else{list.innerHTML = "<li>No item found</li>"}
 
- }
+//  }
 
-//  now we create function for delete
-function deleting(index){var getFromLocalStorage = localStorage.getItem('saved');
-  getFromLocalStorage = JSON.parse(getFromLocalStorage);
-  getFromLocalStorage.splice(index,1);
-  getFromLocalStorage = JSON.stringify(getFromLocalStorage);
-  localStorage.setItem('saved',getFromLocalStorage);
-  showing();
- }
+// //  now we create function for delete
+// function deleting(index){var getFromLocalStorage = localStorage.getItem('saved');
+//   getFromLocalStorage = JSON.parse(getFromLocalStorage);
+//   getFromLocalStorage.splice(index,1);
+//   getFromLocalStorage = JSON.stringify(getFromLocalStorage);
+//   localStorage.setItem('saved',getFromLocalStorage);
+//   showing();
+//  }
 
 /*_______________________ Question no 1 ______________________
 
 _________________________ Answer ____________________________*/
+// Load cart when page loads
+
 
 
 /*_______________________ Question no 1 ______________________
