@@ -390,85 +390,233 @@ _________________________ Answer ____________________________*/
 // }
 
 /*_______________________ Question no 20 ______________________
-
+local storage related
 _________________________ Answer ____________________________*/
-function addStudent() {
-      var name = document.getElementById("name").value;
-      var age = document.getElementById("age").value;
-      var className = document.getElementById("class").value;
+// function addStudent() {
+//       var name = document.getElementById("name").value;
+//       var age = document.getElementById("age").value;
+//       var className = document.getElementById("class").value;
 
-      if (name === "" || age === "" || className === "") {
-        alert("Please fill all fields");
-        return;
-      }
+//       if (name === "" || age === "" || className === "") {
+//         alert("Please fill all fields");
+//         return;
+//       }
 
-      var student = {
-        name: name,
-        age: age,
-        class: className
-      };
+//       var student = {
+//         name: name,
+//         age: age,
+//         class: className
+//       };
 
-      var allStudents = localStorage.getItem("students");
+//       var allStudents = localStorage.getItem("students");
 
-      if (allStudents === null) {
-        allStudents = [];
-      } else {
-        allStudents = JSON.parse(allStudents);
-      }
+//       if (allStudents === null) {
+//         allStudents = [];
+//       } else {
+//         allStudents = JSON.parse(allStudents);
+//       }
 
-      allStudents.push(student);
-      localStorage.setItem("students", JSON.stringify(allStudents));
+//       allStudents.push(student);
+//       localStorage.setItem("students", JSON.stringify(allStudents));
 
-      document.getElementById("name").value = "";
-      document.getElementById("age").value = "";
-      document.getElementById("class").value = "";
+//       document.getElementById("name").value = "";
+//       document.getElementById("age").value = "";
+//       document.getElementById("class").value = "";
 
-      showStudents();
+//       showStudents();
+//     }
+
+//     function showStudents() {
+//       var output = document.getElementById("output");
+//       output.innerHTML = "";
+
+//       var allStudents = localStorage.getItem("students");
+
+//       if (allStudents !== null) {
+//         allStudents = JSON.parse(allStudents);
+
+//         for (var i = 0; i < allStudents.length; i++) {
+//           output.innerHTML +=
+//             "Name: " + allStudents[i].name + " | Age: " + allStudents[i].age + " | Class: " + allStudents[i].class + "<br><br>";
+//         }
+//       }
+//     }
+
+//     // Call when page loads
+//     showStudents();
+
+
+
+
+/*_______________________ Question no 21 ______________________
+todo list
+_________________________ Answer ____________________________*/
+// function addTask() {
+//       var task = document.getElementById("taskInput").value;
+
+//       if (task === "") {
+//         alert("Please enter a task");
+//         return;
+//       }
+
+//       var tasks = localStorage.getItem("todoList");
+
+//       if (tasks === null) {
+//         tasks = [];
+//       } else {
+//         tasks = JSON.parse(tasks);
+//       }
+
+//       tasks.push(task);
+//       localStorage.setItem("todoList", JSON.stringify(tasks));
+
+//       document.getElementById("taskInput").value = "";
+//       showTasks();
+//     }
+
+//     function showTasks() {
+//       var list = document.getElementById("taskList");
+//       list.innerHTML = "";
+
+//       var tasks = localStorage.getItem("todoList");
+
+//       if (tasks !== null) {
+//         tasks = JSON.parse(tasks);
+
+//         for (var i = 0; i < tasks.length; i++) {
+//           list.innerHTML += `
+//             <div class="task">
+//               <input id="editInput${i}" value="${tasks[i]}" readonly>
+//               <button onclick="editTask(${i})">Edit</button>
+//               <button onclick="deleteTask(${i})">Delete</button>
+//             </div>
+//           `;
+//         }
+//       }
+//     }
+
+//     function deleteTask(index) {
+//       var tasks = JSON.parse(localStorage.getItem("todoList"));
+//       tasks.splice(index, 1);
+//       localStorage.setItem("todoList", JSON.stringify(tasks));
+//       showTasks();
+//     }
+
+//     function editTask(index) {
+//       var input = document.getElementById("editInput" + index);
+//       if (input.readOnly) {
+//         input.readOnly = false;
+//         input.focus();
+//       } else {
+//         var tasks = JSON.parse(localStorage.getItem("todoList"));
+//         tasks[index] = input.value;
+//         localStorage.setItem("todoList", JSON.stringify(tasks));
+//         input.readOnly = true;
+//         showTasks();
+//       }
+//     }
+
+//     // Show tasks on page load
+//     showTasks();
+
+
+
+/*_______________________ Question no 22 ______________________
+todos list
+_________________________ Answer ____________________________*/
+// first function
+// function addTask(){let getTask = document.getElementById('userinput').value;
+//   if(getTask === ''){alert('plz enter task');
+//     return;
+//   }
+//   let checkInStore = localStorage.getItem('work');
+//   if(checkInStore === null){checkInStore = []}
+//   else{checkInStore = JSON.parse(checkInStore)}
+
+//   checkInStore.push(getTask);
+//   checkInStore = JSON.stringify(checkInStore)
+//   localStorage.setItem('work',checkInStore);
+//   document.getElementById('userinput').value = '';
+//   show();
+// }
+// // funtion show task 
+// function show(){let list = JSON.parse(localStorage.getItem('work'));
+//   let result = document.getElementById('display');
+//   result.innerHTML = '';
+//   if(list !== null){for(let i = 0; i<list.length; i++){let li = document.createElement('li');
+//     let liContent = document.createTextNode(list[i]);
+//     li.appendChild(liContent);
+//     let btn = document.createElement('button');
+//     let btnContent = document.createTextNode('Delete');
+//     btn.appendChild(btnContent);
+//    btn.setAttribute('onclick',`deleteItem(${i})`)
+//     result.appendChild(li);
+//     result.appendChild(btn);
+
+//   }}
+//   else{result.innerHTML = "<li>No item found</li>"}
+  
+// }
+
+
+// function deleteItem(index){
+//    let checkInStore = localStorage.getItem('work');
+//     checkInStore = JSON.parse(checkInStore);
+//    checkInStore.splice(index,1);
+//   localStorage.setItem('work', JSON.stringify(checkInStore));
+// show();}
+
+/*_______________________ Question no 23 ______________________
+todo list practice
+_________________________ Answer ____________________________*/
+// first funciton for creating local storage and save data
+function adding(){let getInputValue = document.getElementById('userinput').value;
+  if(getInputValue === ''){alert('plz enter valu');
+    return;
+  }
+  var getFromLocalStorage = localStorage.getItem('saved');
+  if(getFromLocalStorage === null){getFromLocalStorage = []}
+  else{getFromLocalStorage = JSON.parse(getFromLocalStorage)}
+  getFromLocalStorage.push(getInputValue);
+ getFromLocalStorage = JSON.stringify(getFromLocalStorage);
+ localStorage.setItem('saved',getFromLocalStorage);
+//  make input empty
+document.getElementById('userinput').value = '';
+document.getElementById('userinput').focus();
+showing();
+
+}
+// now we show our saved data on dom from localstorage 
+function showing(){var getFromLocalStorage = localStorage.getItem('saved');
+  getFromLocalStorage = JSON.parse(getFromLocalStorage);
+  if(getFromLocalStorage){
+    let list = document.getElementById('display');
+    list.innerHTML = '';
+    for(let i = 0; i <getFromLocalStorage.length; i++){
+      let li = document.createElement('li');
+      let liContent = document.createTextNode(getFromLocalStorage[i]);
+      li.appendChild(liContent);
+      let btn = document.createElement('button');
+      let btnContent = document.createTextNode('Delete');
+      btn.appendChild(btnContent);
+      // btn.setAttribute('onclcik',`deleting(${i})`);
+      btn.setAttribute('onclick', `deleting(${i})`);
+      list.appendChild(li);
+      list.appendChild(btn);
     }
+  }
+  else{list.innerHTML = "<li>No item found</li>"}
 
-    function showStudents() {
-      var output = document.getElementById("output");
-      output.innerHTML = "";
+ }
 
-      var allStudents = localStorage.getItem("students");
-
-      if (allStudents !== null) {
-        allStudents = JSON.parse(allStudents);
-
-        for (var i = 0; i < allStudents.length; i++) {
-          output.innerHTML +=
-            "Name: " + allStudents[i].name + " | Age: " + allStudents[i].age + " | Class: " + allStudents[i].class + "<br><br>";
-        }
-      }
-    }
-
-    // Call when page loads
-    showStudents();
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
+//  now we create function for delete
+function deleting(index){var getFromLocalStorage = localStorage.getItem('saved');
+  getFromLocalStorage = JSON.parse(getFromLocalStorage);
+  getFromLocalStorage.splice(index,1);
+  getFromLocalStorage = JSON.stringify(getFromLocalStorage);
+  localStorage.setItem('saved',getFromLocalStorage);
+  showing();
+ }
 
 /*_______________________ Question no 1 ______________________
 
