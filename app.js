@@ -623,30 +623,95 @@ _________________________ Answer ____________________________*/
 //   showing();
 //  }
 
-/*_______________________ Question no 1 ______________________
+/*_______________________ Question no 24 ______________________
+ Task 1: Sum of Array Elements
+Question:
+Given an array of numbers, use a for...of loop to calculate the sum of all numbers.
 
+Input Example:
+[10, 20, 30, 40]
+
+Expected Output:
+Sum: 100
 _________________________ Answer ____________________________*/
-// Load cart when page loads
+// let array = [10,20,30,40];
+// var sum = 0;
+// for(let key of array){
+//   sum = sum + key
+// }
+// console.log(sum)
+// var sum = 0;
+// for(let i = 0;i<array.length;i++){
+//   sum = sum + array[i]
+// }
+// console.log(sum)
+/*_______________________ Question no 25 ______________________
+Task 2: Count Vowels in a String
+Question:
+Given a string, use a for...of loop to count how many vowels (a, e, i, o, u) are in the string.
 
+Input Example:
+"JavaScript is fun"
 
-
-/*_______________________ Question no 1 ______________________
-
+Expected Output:
+Vowel Count: 5
 _________________________ Answer ____________________________*/ 
+// let str = 'JAvaScript is fun';
+//    str = str.toLowerCase();
+// let vowels = 0;
+// for(let i = 0; i < str.length; i++){if(str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u'){
+//   vowels++;
+// }
+// }
+// console.log(vowels)
+// let str = "JavaScript is fun";
+//     str = str.toLowerCase();
+//     let vowels = 0;
+//     for(let key of str){if(key === 'a' || key === 'e' || key === 'i' || key === 'o' || key === 'u'){
+//       vowels++;
+//     }}
+// console.log(vowels)
+/*_______________________ Question no 26 ______________________
+ Find All Even Numbers
+Question:
+Given an array of integers, use a for...of loop to filter and collect all even numbers.
 
+Input Example:
+[3, 8, 15, 24, 42]
 
+Expected Output:
+Even Numbers: [8, 24, 42]
 
-/*_______________________ Question no 1 ______________________
 
 _________________________ Answer ____________________________*/
+// let array = [3,8,15,24,42];
+// let even = [];
+// for(let key of array){if(key % 2 === 0){even.push(key)}}
+// console.log(even)
 
+/*_______________________ Question no 27 ______________________
+ Uppercase First Letter
+Question:
+Given an array of lowercase names, use a for...of loop to convert the first letter of each name to uppercase.
 
+Input Example:
+["alice", "bob", "charlie"]
 
-/*_______________________ Question no 1 ______________________
-
+Expected Output:
+["Alice", "Bob", "Charlie"]
 _________________________ Answer ____________________________*/
-
-
+// let array = ['alice','bob','charlie'];
+// let newArray = [];
+// for(let key of array){let a = key.slice(0,1);
+//   a = a.toUpperCase();
+ 
+//   let b = key.slice(1);
+//   let result = a + b;
+//   console.log(result);
+// newArray.push(result);
+  
+// }
+// console.log(newArray)
 
 
 
