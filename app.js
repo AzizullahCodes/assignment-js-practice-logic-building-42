@@ -715,27 +715,44 @@ _________________________ Answer ____________________________*/
 
 
 
-/*_______________________ Question no 1 ______________________
-
+/*_______________________ Question no 28 ______________________
+array destructuring
 _________________________ Answer ____________________________*/
+// let [name,classe,rollNo,profession,district] = ['Azizullah','Matric',23,'Farmer','Attock']
+// console.log(name);
+// console.log(classe);
+// console.log(profession);
+// console.log(district);
 
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
+/*_____________________ Question no 29 ______________________
+Enhanced object Literals
 _________________________ Answer ____________________________*/
+// let name = 'Aziz';
+// let classe = 'Matric';
+// let district = 'Attock';
+
+// let detail = {name,
+//   classe,
+//   district
+// }
+
+// console.log(detail)
 
 
-
-
-
-/*_______________________ Question no 1 ______________________
-
+/*_______________________ Question no 30 ______________________
+object destructuring
 _________________________ Answer ____________________________*/
-
-
+let detail = {name : 'Azziz',
+  age : 30,
+  designation : 'software engineer'
+}
+// console.log(detail.name);
+// console.log(detail.age);
+// console.log(detail.designation);
+// let {name , age, designation} = detail;
+// console.log(name);
+// console.log(age);
+// console.log(designation)
 
 
 /*_______________________ Question no 1 ______________________
