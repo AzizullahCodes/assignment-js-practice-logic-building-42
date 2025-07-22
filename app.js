@@ -755,290 +755,264 @@ let detail = {name : 'Azziz',
 // console.log(designation)
 
 
-/*_______________________ Question no 1 ______________________
-
+/*_______________________ Question no 31 ______________________
+enhanced object literals 
 _________________________ Answer ____________________________*/
+// const userName = 'Aziz';
+// const rollNo = 34;
+// designation = 'ASE';
+
+// let details = {userName ,
+//   rollNo,
+//   designation
+// }
+// console.log(details)
 
 
-
-
-/*_______________________ Question no 1 ______________________
-
+/*_______________________ Question no 32 ______________________
+array destructuring 
 _________________________ Answer ____________________________*/
+// const  [name,rollno, designation] = ['Hakim',323,'software Engineer'];
+// console.log(name);
+// console.log(designation)
 
-
-/*_______________________ Question no 1 ______________________
-
+/*_______________________ Question no 33 ______________________
+object destructuring 
 _________________________ Answer ____________________________*/ 
 
+// let student = {name : 'Frhan',
+//   rollNo  : 32,
+//   classr : 'Matric'
+// }
+// let {name,rollNo,classr} = student;
+// console.log(name);
+// console.log(rollNo);
+// console.log(classr);
+/*_______________________ Question no 34 ______________________
+Itrators for in/of
+_________________________ Answer ____________________________*/
+// let fruits = ['apple','banana','mango','orange'];
+// // for(let i = 0; i<fruits.length; i++){console.log(fruits[i])}
+// // for(let key of fruits){console.log(key)}
+// for(let key in fruits){console.log(key + ' : ' + fruits[key])}
 
+/*_______________________ Question no 35 ______________________
+remove {} in single line code
+_________________________ Answer ____________________________*/
+// let name = 'aziz';
+// if(name == 'aziz')console.log('ok')
+// else console.log('not ok')
 
-/*_______________________ Question no 1 ______________________
+/*_______________________ Question no 36 ______________________
+
+Create variables for a student:
+
+name = "Ali"
+
+age = 20
+
+course = "JavaScript"
+
+Use enhanced object literals to create an object called student that:
+
+Uses shorthand properties for name, age, and course.
+
+Has a method greet() that logs:
+
+Hello, my name is Ali. I am 20 years old and learning JavaScript.
+💡 Output Example:
+
+student.greet();
+// Hello, my name is Ali. I am 20 years old and learning JavaScript.
+_________________________ Answer ____________________________*/
+// let name = "Ali";
+// let age = 20;
+// let course = 'JavaScript';
+
+// const student = {name,
+//   age,
+//   course,
+
+//   greet(){console.log(`Hello, my name is ${name}. I am ${age} years old and learning ${course}`)}
+// }
+// console.log(student)
+
+// student.greet()
+
+/*_______________________ Question no 37 ______________________
+Create an array called studentNames:
+
+const studentNames = ["Ali", "Sara", "Ahmed", "Zara"];
+Use a for...of loop to print each name like this:
+
+...
+🧩 Example Output:
+
+Student Name: Ali
+Student Name: Sara
+Student Name: Ahmed
+Student Name: Zara
+_________________________ Answer ____________________________*/
+// const studentNames = ['Ali','Sara','Ahmad','Zara'];
+// for(let key of studentNames){console.log('Student Name :'+ key)}
+/*_______________________ Question no 38 ______________________
+Sum of Numbers
+Array:
+const numbers = [10, 20, 30, 40];
+Task:
+Use for...of to find and print the sum of all numbers.
+Expected Output:
+Total: 100
 
 _________________________ Answer ____________________________*/
+//  const numbers = [10,20,30,40];
+//  let sum = 0;
+//  for(let key of numbers){sum = sum + key}
+//  console.log(sum)
 
 
+//  let array = [10,20,30,40];
+// var sum = 0;
+// for(let key of array){
+//   sum = sum + key
+// }
+// console.log(sum)
 
-/*_______________________ Question no 1 ______________________
+            
 
+/*_______________________ Question no 39 ______________________
+ Double the Numbers
+Array:
+const nums = [1, 2, 3, 4];
 _________________________ Answer ____________________________*/
+// let nums = [1,2,3,4];
+// for(let key of nums){console.log(key*2)}
 
 
 
-
-
-/*_______________________ Question no 1 ______________________
-
+/*_______________________ Question no 40 ______________________
+Array Destruturing
 _________________________ Answer ____________________________*/
+// let [name,course,rollNo] = ['Aziz','Web Development',321];
+// console.log(name);
+// console.log(course);
+// console.log(rollNo);
 
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-/*_______________________ Question no 1 ______________________
-
+/*_______________________ Question no 41 ______________________
+object Destructuring 
 _________________________ Answer ____________________________*/ 
+// let student = {name : 'Aziz',
+//   rollNo : 23131,
+//   course : 'Web Development'
+// }
+// let {name,rollNo,course} = student;
+// console.log(name);
+// console.log(rollNo);
+// console.log(course);
 
-
-
-/*_______________________ Question no 1 ______________________
-
+/*_______________________ Question no 42 ______________________
+Enhanced Object Literals
+_________________________ Answer ____________________________*/
+// name = 'Aziz';
+// rollNo = '4243';
+// school = 'asgsgsa'
+// course = 'web development';
+// const student = {name,
+//  school,
+//   course,
+//   rollNo
+// }
+// console.log(student)
+/*_______________________ Question no 43 ______________________
+itrators for in/of
+_________________________ Answer ____________________________*/
+// let fruits = ['apple','banana','mango','guava'];
+// for(let key of fruits){console.log(key)}
+// for(let i = 0 ; i < fruits.length;i++){console.log(fruits[i])}
+// for(let key in fruits){console.log(`${key } : ${fruits[key]}`)}
+/*_______________________ Question no 44 ______________________
+convert it to arrow function  
+function add(a, b) {
+    return a + b;
+}
+_________________________ Answer ____________________________*/
+// function add(a,b){return a + b;}
+// let ans = add(5,4);
+// console.log(ans)
+//  let add = (a,b)=>{return a + b;}
+//   let final = add(2,4);
+//   console.log(final)
+/*_______________________ Question no 45 ______________________
+default parameter
 _________________________ Answer ____________________________*/
 
-
-
-/*_______________________ Question no 1 ______________________
-
+// let add = (a,b = 2)=>{return a*b;}
+// let ans = add(3);
+// console.log(ans)
+/*_______________________ Question no 46 ______________________
+Create a function called greet that takes a name parameter. If name is not
+ provided, it should default to the string "Guest". The function should
+  return a greeting string.
 _________________________ Answer ____________________________*/
+// let greet = (user = 'Guest')=>{ return `welcom : ${user}`}
 
+// let ans = greet('ali');
+// console.log(ans)
 
-
-
-
-/*_______________________ Question no 1 ______________________
-
+/*_______________________ Question no 47 ______________________
+turnary operator
 _________________________ Answer ____________________________*/
+// let user =undefined;
+// let condition = (user !== undefined)?(user):('not found');
+// console.log(condition)
 
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
+/*_______________________ Question no 48 ______________________
+rest parameter
 _________________________ Answer ____________________________*/
+// const showFruits = (fruit1,fruit2,...restparameter)=>{console.log(fruit1,fruit2,restparameter)}
+// showFruits('apple','mango','guava','apple','mango','guava','apple','mango','guava')
 
+/*_______________________ Question no 49 ______________________
+Summing an Arbitrary Number of Arguments ➕
+Objective: Use a rest parameter to accept and sum any number of numerical arguments.
 
+Instructions:
+Create a function called sumAll that accepts any number of numerical arguments and returns their sum.
 
+Example Usage:
 
+JavaScript
 
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-/*_______________________ Question no 1 ______________________
-
+sumAll(1, 2, 3);          // Expected: 6
+sumAll(10, 20, 30, 40);   // Expected: 100
+sumAll();                 // Expected: 0
 _________________________ Answer ____________________________*/ 
+ let summing = (...restparameter)=>{let sum = 0;
+  for(let i = 0; i <restparameter.length; i++){sum = sum + restparameter[i];
+       }
+   console.log(sum)
+ }
+
+  summing(2,3,5);
+ summing(20,30,50);
 
 
+/*_______________________ Question no 50  ______________________
+List All Friends
+Description: Write a function that takes a name and then any number of friend 
+names using the rest parameter. Log a message like:
+"Ali's friends are: Ahmed, Sana, John"
 
-/*_______________________ Question no 1 ______________________
+Example Input:
 
-_________________________ Answer ____________________________*/
+listFriends("Ali", "Ahmed", "Sana", "John")
+Expected Output:
 
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-
-/*_______________________ Question no 1 ______________________
+Ali's friends are: Ahmed, Sana, John
 
 _________________________ Answer ____________________________*/
-
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/ 
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/ 
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
-
-
-
-
-/*_______________________ Question no 1 ______________________
-
-_________________________ Answer ____________________________*/
+// const friends = (name,...restparameter)=>{console.log(`${name}'s friends are :${restparameter}`)}
+// friends('ali','amir','sndleeb')
+// friends('munir','qadri','Sddiq','Bksh')
 
 
